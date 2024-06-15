@@ -1,0 +1,74 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://schemas.microsoft.com/dotnet/2021/maui"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             x:Class="JokenPo.View.JokenPo_View"
+             Title="JokenPo">
+
+    <ScrollView>
+        <VerticalStackLayout
+            Padding="30,0"
+            Spacing="25"
+            HorizontalOptions="Center"
+            VerticalOptions="Center">
+
+            <Label
+                Text="{Binding Resultado}"
+                HorizontalOptions="Center"
+                FontSize="25"
+                FontAttributes="Bold"/>
+
+            <HorizontalStackLayout Spacing="100"
+                                   Margin="0,50,0,0">
+                <VerticalStackLayout>
+
+                    <Label
+                        Text="Você"
+                        HorizontalOptions="Center"/>
+
+                    <Image
+                        Source="player.png"
+                        HeightRequest="185"
+                        Aspect="AspectFit"
+                        SemanticProperties.Description="dot net bot in a race car number eight" />
+
+                </VerticalStackLayout>
+
+                <Label
+                    Text="0x0"
+                    VerticalOptions="Center"/>
+
+                <VerticalStackLayout>
+
+                    <Label
+                        Text="Oponente"
+                        HorizontalOptions="Center"/>
+
+                    <Image
+                        Source="oponnent.png"
+                        HeightRequest="185"
+                        Aspect="AspectFit"
+                        SemanticProperties.Description="dot net bot in a race car number eight"/>
+
+                </VerticalStackLayout>
+            </HorizontalStackLayout>
+
+            <Picker Title="Selecione sua jogada"
+                    SelectedItem="{Binding Pl_escolha}">
+                <Picker.ItemsSource>
+                    <x:Array Type="{x:Type x:String}">
+                        <x:String>Pedra</x:String>
+                        <x:String>Papel</x:String>
+                        <x:String>Tesoura</x:String>
+                    </x:Array>
+                </Picker.ItemsSource>
+            </Picker>
+
+            <Button
+                Command="{Binding JogarCommand}"
+                Text="Jogar" 
+                SemanticProperties.Hint="Realiza a jogada"
+                HorizontalOptions="Fill"/>
+        </VerticalStackLayout>
+    </ScrollView>
+
+</ContentPage>
