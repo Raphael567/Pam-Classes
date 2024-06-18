@@ -3,7 +3,7 @@
     x:Class="CoinFliper.AppShell"
     xmlns="http://schemas.microsoft.com/dotnet/2021/maui"
     xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
-    xmlns:local="clr-namespace:CoinFliper"
+    xmlns:local="clr-namespace:CoinFliper.Views"
     Shell.FlyoutBehavior="Disabled"
     Title="CoinFliper">
     
@@ -21,5 +21,10 @@
         Title="Coin Flip Two Players"
         ContentTemplate="{DataTemplate local:CoinFlip_TwoPlayers}"
         Route="CoinFlip_TwoPlayers"/>
+
+    <ShellContent 
+        Title="CoinView"
+        ContentTemplate="{DataTemplate local:CoinView}"
+        Route="CoinView"/>
 
 </Shell>

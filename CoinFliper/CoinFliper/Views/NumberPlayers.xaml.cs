@@ -1,4 +1,6 @@
-namespace CoinFliper;
+using CoinFliper.Views;
+
+namespace CoinFliper.Views;
 
 public partial class NumberPlayers : ContentPage
 {
@@ -15,5 +17,10 @@ public partial class NumberPlayers : ContentPage
     private async void TwoPlayersButton_Clicked(object sender, EventArgs e)
     {
         await Navigation.PushAsync(new CoinFlip_TwoPlayers());
+    }
+
+    private async void CoinView_Clicked(object sender, EventArgs e)
+    {
+        await Navigation.PushAsync(new CoinView());
     }
 }

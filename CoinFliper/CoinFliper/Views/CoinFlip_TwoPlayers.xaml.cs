@@ -1,4 +1,4 @@
-namespace CoinFliper;
+namespace CoinFliper.Views;
 
 public partial class CoinFlip_TwoPlayers : ContentPage
 {

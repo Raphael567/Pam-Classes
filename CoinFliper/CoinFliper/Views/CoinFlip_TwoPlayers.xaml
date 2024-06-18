@@ -1,7 +1,7 @@
 <?xml version="1.0" encoding="utf-8" ?>
 <ContentPage xmlns="http://schemas.microsoft.com/dotnet/2021/maui"
              xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
-             x:Class="CoinFliper.CoinFlip_TwoPlayers"
+             x:Class="CoinFliper.Views.CoinFlip_TwoPlayers"
              Title="CoinFlip_TwoPlayers">
     <VerticalStackLayout Padding="30,0"
                          Spacing="25">
