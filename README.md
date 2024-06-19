@@ -98,7 +98,6 @@ public class MinhaViewModel : INotifyPropertyChanged
             }
         }
     }
-```
 
     // Implementação do INotifyPropertyChanged omitida para brevidade
     public event PropertyChangedEventHandler PropertyChanged;
@@ -107,6 +106,7 @@ public class MinhaViewModel : INotifyPropertyChanged
         PropertyChanged?.Invoke(this, new PropertyChangedEventArgs(propertyName));
     }
 }
+```
 
 Exemplo em XAML:
 
