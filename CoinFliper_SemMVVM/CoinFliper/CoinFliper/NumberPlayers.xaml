@@ -1,0 +1,34 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://schemas.microsoft.com/dotnet/2021/maui"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             x:Class="CoinFliper.NumberPlayers"
+             Title="Número de Jogadores">
+    <VerticalStackLayout
+        Spacing="50"
+        Margin="70">
+        
+        <Label 
+            Text="Esolha uma das opções"
+            FontSize="Large"
+            VerticalOptions="Center" 
+            HorizontalOptions="Center" />
+
+        <FlexLayout Direction="Row"
+                    AlignContent="Center"
+                    JustifyContent="SpaceEvenly">
+            
+            <Button 
+                Text="Um Jogador"
+                x:Name="OnePlayerButton"
+                Clicked="OnePlayerButton_Clicked"
+                WidthRequest="200"/>
+
+            <Button 
+                Text="Dois Jogadores"
+                x:Name="TwoPlayersButton"
+                Clicked="TwoPlayersButton_Clicked"
+                WidthRequest="200"/>
+
+        </FlexLayout>
+    </VerticalStackLayout>
+</ContentPage>
