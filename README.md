@@ -37,16 +37,18 @@ Adicionar a view no lugar da main page:
 
 Definir a página:
 
+```
 // NovaPagina.xaml
 <ContentPage xmlns="http://xamarin.com/schemas/2014/forms"
              xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
              x:Class="MinhaApp.Views.NovaPagina">
     <!-- Conteúdo da página -->
 </ContentPage>
-
+```
 
 Registrar a página no AppShell:
 
+```
 // AppShell.xaml.cs
 public partial class AppShell : Xamarin.Forms.Shell
 {
@@ -56,12 +58,15 @@ public partial class AppShell : Xamarin.Forms.Shell
         Routing.RegisterRoute(nameof(NovaPagina), typeof(NovaPagina));
     }
 }
-
+```
 
 Navegar na nova página:
 
 // Exemplo de navegação a partir de um botão ou evento
+
+```
 await Shell.Current.GoToAsync($"//{nameof(NovaPagina)}");
+```
 
 ________________________________________________________________
 
