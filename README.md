@@ -62,9 +62,8 @@ public partial class AppShell : Xamarin.Forms.Shell
 
 Navegar na nova página:
 
-// Exemplo de navegação a partir de um botão ou evento
-
 ```
+// Exemplo de navegação a partir de um botão ou evento
 await Shell.Current.GoToAsync($"//{nameof(NovaPagina)}");
 ```
 
@@ -76,9 +75,10 @@ O Binding (ou ligação, em tradução literal) é um conceito central em framew
 
 Os Bindings são criados principalmente nos arquivos de definição da interface do usuário, que podem ser escritos em XAML ou diretamente em código.
 
+```
 <!-- Exemplo de Binding em XAML -->
 <Label Text="{Binding Nome}" />
-
+```
 ________________________________________________________________
 
 5. O QUE É BINDING CONTEXT? ESCREVA COMO ASSOCIAMOS O BINDING CONTEXT A CLASSE VIEWMODEL.
