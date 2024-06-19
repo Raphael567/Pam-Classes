@@ -82,6 +82,7 @@ O Binding Context é uma propriedade em estruturas de desenvolvimento de interfa
 
 Definir uma ViewModel:
 
+```
 public class MinhaViewModel : INotifyPropertyChanged
 {
     private string _nome;
@@ -97,6 +98,7 @@ public class MinhaViewModel : INotifyPropertyChanged
             }
         }
     }
+```
 
     // Implementação do INotifyPropertyChanged omitida para brevidade
     public event PropertyChangedEventHandler PropertyChanged;
@@ -106,9 +108,9 @@ public class MinhaViewModel : INotifyPropertyChanged
     }
 }
 
-
 Exemplo em XAML:
 
+```
 <ContentPage x:Class="MinhaApp.MinhaPagina"
              xmlns="http://xamarin.com/schemas/2014/forms"
              xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
@@ -119,7 +121,7 @@ Exemplo em XAML:
         <!-- Outros controles vinculados -->
     </StackLayout>
 </ContentPage>
-
+```
 ________________________________________________________________
 
 6. PARA QUE SERVE A VIEWMODEL?
