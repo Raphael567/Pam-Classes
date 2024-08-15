@@ -3,36 +3,19 @@
              xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
              x:Class="HTTP.Views.PostView"
              Title="PostView">
-    <VerticalStackLayout>
-
-        <CollectionView.ItemTemplate>
-            <DataTemplate>
-                <VerticalStackLayout>
-                    <Frame>
-                        <VerticalStackLayout Margin="50" HorizontalOptions="Center" MaximumWidthRequest="180">
-                            <Label 
-                                Text="{Binding UserId}"
-                                VerticalOptions="Center" 
-                                HorizontalOptions="Center" />
-
-                            <Label
-                                Text="{Binding PostId}"
-                                VerticalOptions="Center"
-                                HorizontalOptions="Center"/>
-
-                            <Label
-                                Text="{Binding PostTitle}"
-                                VerticalOptions="Center"
-                                HorizontalOptions="Center"/>
-
-                             <Label
-                                Text="{Binding PostBody}"
-                                VerticalOptions="Center"
-                                HorizontalOptions="Center"/>
+        <ScrollView>
+        <VerticalStackLayout>
+            <Button Text="Carregar Postagens" Command="{Binding getPostsCommand}"/>
+            <CollectionView ItemSource="{Binding posts}">
+                <CollectionView.ItemTemplate>
+                    <DataTemplate>
+                        <VerticalStackLayout>
+                            <Label Text="{Binding PostTitle}"/>
+                            <Label Text="{Binding PostBody}" />
                         </VerticalStackLayout>
-                    </Frame>
-                </VerticalStackLayout>
-            </DataTemplate>
-        </CollectionView.ItemTemplate>
-    </VerticalStackLayout>
+                    </DataTemplate>
+                </CollectionView.ItemTemplate>
+            </CollectionView>
+        </VerticalStackLayout>
+    </ScrollView>
 </ContentPage>

@@ -1,6 +1,7 @@
 ﻿using HTTP.Models;
 using System;
 using System.Collections.Generic;
+using System.Collections.ObjectModel;
 using System.Linq;
 using System.Text;
 using System.Text.Json;
@@ -13,7 +14,7 @@ namespace HTTP.Services
 
         private HttpClient _httpClient;
         private JsonSerializerOptions _serializerOptions;
-        private List<Posts> posts;
+        private ObservableCollection<Posts> posts;
 
         public PostService()
         {
@@ -24,10 +25,24 @@ namespace HTTP.Services
                 WriteIndented = true,
             };
         }
-    }
 
-    public async Task<List<Posts>> GetPostsAsync()
-    {
-        Items = new List<> 
+        public async Task<ObservableCollection<Posts>> GetPostsAsync()
+        {
+            Uri uri = new Uri("https://jsonplaceholder.typicode.com/posts");
+            try
+            {
+                HttpResponseMessage response = await _httpClient.GetAsync(uri);
+                if (response.IsSuccessStatusCode)
+                {
+                    string content = await response.Content.ReadAsStringAsync();
+                    posts = JsonSerializer.Deserialize<ObservableCollection<Posts>>(content, _serializerOptions);
+                }
+            }
+            catch
+            {
+
+            }
+            return posts;
+        }
     }
 }
