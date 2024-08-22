@@ -19,7 +19,7 @@ namespace HTTP.Services
         public PostService()
         {
             _httpClient = new HttpClient();
-            JsonSerializerOptions serializerOptions = new JsonSerializerOptions()
+            _serializerOptions = new JsonSerializerOptions()
             {
                 PropertyNamingPolicy = JsonNamingPolicy.CamelCase,
                 WriteIndented = true,

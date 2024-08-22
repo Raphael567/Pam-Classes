@@ -10,7 +10,7 @@ namespace HTTP.Models
     {
         public int UserId { get; set; }
         public int PostId { get; set; }
-        public string PostTitle { get; set; }
-        public string PostBody { get; set; }
+        public string Title { get; set; }
+        public string Body { get; set; }
     }
 }

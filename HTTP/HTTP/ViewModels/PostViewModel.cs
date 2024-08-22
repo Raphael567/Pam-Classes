@@ -16,11 +16,11 @@ namespace HTTP.ViewModels
         [ObservableProperty]
         ObservableCollection<Posts> posts;
         PostService postsService;
-        public ICommand getPostsCommand { get; }
+        public ICommand GetPostsCommand { get; }
 
         public PostViewModel()
         {
-            getPostsCommand = new Command(getPosts);
+            GetPostsCommand = new Command(getPosts);
             postsService = new PostService();
         }
 
