@@ -64,10 +64,15 @@
 	</ItemGroup>
 
 	<ItemGroup>
-	  <Folder Include="ViewModels\" />
+	  <Compile Update="Views\CreatePostView.xaml.cs">
+	    <DependentUpon>CreatePostView.xaml</DependentUpon>
+	  </Compile>
 	</ItemGroup>
 
 	<ItemGroup>
+	  <MauiXaml Update="Views\CreatePostView.xaml">
+	    <Generator>MSBuild:Compile</Generator>
+	  </MauiXaml>
 	  <MauiXaml Update="Views\PostView.xaml">
 	    <Generator>MSBuild:Compile</Generator>
 	  </MauiXaml>

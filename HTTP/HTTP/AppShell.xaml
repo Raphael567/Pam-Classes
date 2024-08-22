@@ -6,9 +6,15 @@
     xmlns:local="clr-namespace:HTTP.Views"
     Shell.FlyoutBehavior="Disabled"
     Title="HTTP">
+    <TabBar>
+        <ShellContent
+            Title="Home"
+            ContentTemplate="{DataTemplate local:PostView}"
+            Route="PostView" />
 
-    <ShellContent
-        Title="Home"
-        ContentTemplate="{DataTemplate local:PostView}"
-        Route="PostView" />
+        <ShellContent
+            Title="Criar Postagem"
+            ContentTemplate="{DataTemplate local:CreatePostView}"
+            Route="CreatePostView"/>
+    </TabBar>
 </Shell>
